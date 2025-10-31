@@ -26,10 +26,6 @@ This node performs OCR on an image provided in the `msg.payload`.
 
 The node will display its progress while recognizing the text. It will show a "recognizing..." status while processing the image.
 
-## Example Flow
-
-You can use an `http in` node to receive an image file and pass it to the `simple-ocr` node. The recognized text can then be seen in the debug panel.
-
 ## License
 
 This project is licensed under the [Apache-2.0 License](LICENSE).
