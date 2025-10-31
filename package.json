@@ -1,0 +1,24 @@
+{
+    "name": "@sumit_shinde_84/node-red-contrib-simple-ocr",
+    "version": "0.1.1",
+    "description": "A simple Node-RED node to perform OCR on images using tesseract.js",
+    "main": "simple-ocr.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "sumit_shinde_84",
+    "license": "Apache-2.0",
+    "keywords": [
+        "node-red",
+        "ocr",
+        "tesseract"
+    ],
+    "node-red": {
+        "nodes": {
+            "simple-ocr": "simple-ocr.js"
+        }
+    },
+    "dependencies": {
+        "tesseract.js": "^5.0.5"
+    }
+}

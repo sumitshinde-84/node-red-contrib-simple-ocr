@@ -1,0 +1,43 @@
+<script type="text/javascript">
+    RED.nodes.registerType('simple-ocr',{
+        category: 'function',
+        color: '#A6BBCF',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-eye",
+        label: function() {
+            return this.name||"simple-ocr";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="simple-ocr">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="simple-ocr">
+    <p>A simple node that performs Optical Character Recognition (OCR) on an image.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">buffer</span>
+        </dt>
+        <dd>An image buffer to be processed.</dd>
+    </dl>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">string</span>
+        </dt>
+        <dd>The recognized text from the image.</dd>
+    </dl>
+    <h3>Details</h3>
+    <p>This node uses <code>tesseract.js</code> to perform OCR. It accepts an image as a buffer in <code>msg.payload</code>. The recognized text is returned as a string in <code>msg.payload</code>.</p>
+    <p>The node will display its progress while recognizing the text.</p>
+</script>
